@@ -1,0 +1,233 @@
+:root {
+  --color-bg: hsl(60, 4%, 15%);
+  --color-bg-shadow: hsl(60, 4%, 0%);
+  --color-bg-light: hsl(60, 4%, 30%);
+  --color-text-dark: rgb(49, 49, 49);
+  --color-text-light: rgb(84, 180, 204);
+}
+
+html {
+  background-color: var(--color-bg);
+  color: var(--color-text-light) !important;
+  height: 100vh;
+}
+
+nav {
+  
+  background-color: var(--color-bg);
+  border: none;
+  box-shadow: none;
+ /*  box-shadow:  
+  hsl(59, 100%, 35%) inset 2px 2px 5px,
+  hsl(59, 100%, 65%) inset -5px -5px 10px; */
+ 
+}
+
+nav .brand-logo.center {
+  color: var(--color-text-light);
+  font-weight: bold;
+  line-height: 30px;
+  margin-top: 20px;
+}
+
+
+.card {
+  background-color: transparent;
+  border: none;
+  box-shadow:  
+  var(--color-bg-shadow) 2px 2px 8px,
+  var(--color-bg-light) -6px -6px 8px;
+  border-radius: 5px;
+}
+
+.card .card-title {
+  padding-bottom: 20px;
+}
+
+.right li {
+  margin-top: 10px;
+}
+
+.btn-circle {
+  background-color: transparent;
+  border: none;
+  box-shadow:  
+  var(--color-bg-shadow) 2px 2px 8px,
+  var(--color-bg-light) -6px -6px 8px;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin-left: 10px;
+}
+
+.btn-a {
+  background-color: transparent;
+  border: none;
+  box-shadow:  
+  var(--color-bg-shadow) 2px 2px 8px,
+  var(--color-bg-light) -6px -6px 8px;
+  height: 50px;
+  width: 100px;
+  border-radius: 5px;
+  margin-top: 25px;
+}
+
+.btn-b {
+  background-color: transparent;
+  border: none;
+  box-shadow:  
+  var(--color-bg-shadow) 2px 2px 8px,
+  var(--color-bg-light) -6px -6px 8px;
+  width: 110px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 0px;
+  color: var(--color-text-light);
+}
+
+.btn-c {
+  background-color: transparent;
+  border: none;
+  box-shadow:  
+  var(--color-bg-shadow) 2px 2px 8px,
+  var(--color-bg-light) -6px -6px 8px;
+  width: 200px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+  color: var(--color-text);
+}
+
+.btn-circle:focus,
+.btn-circle:active {
+  background-color: transparent;
+  /* box-shadow:  
+  var(--color-bg-shadow) -3px -3px 4px,
+  var(--color-bg-light) 0px 0px 2px; */
+  animation: press-button 1s;
+}
+
+@keyframes press-button {
+   0% { box-shadow: var(--color-bg-shadow) -3px -3px 4px,
+    var(--color-bg-light) 0px 0px 2px;;
+  }
+
+  100% {
+    box-shadow:  
+  var(--color-bg-shadow) 2px 2px 8px,
+  var(--color-bg-light) -6px -6px 8px;
+
+  }
+}
+
+
+
+.btn-a:focus,
+.btn-a:active,
+.btn-b:focus,
+.btn-b:active,
+.btn-c:focus,
+.btn-c:active
+{
+  background-color: transparent;
+  /* box-shadow:  
+  var(--color-bg-shadow) -3px -3px 4px,
+  var(--color-bg-light) 0px 0px 2px; */
+  animation: press-button 1s;
+}
+
+.btn-a:hover,
+.btn-b:hover,
+.btn-c:hover,
+.btn-circle {
+  background-color: transparent;
+}
+
+.collection {
+  background-color: transparent;
+  outline: none;
+  border-color: transparent;
+  box-shadow:
+  var(--color-bg-shadow) inset 2px 2px 5px,
+  var(--color-bg-light) inset -5px -5px 10px;
+  border-radius: 5px;
+}
+.collection .collection-item,  
+.collection .collection-item:last-child  {
+  background-color: transparent;
+  outline: none;
+  border-color: transparent;
+  box-shadow:
+  var(--color-bg-shadow) inset 2px 2px 5px,
+  var(--color-bg-light) inset -5px -5px 10px;
+}
+
+
+
+input#item-calories,
+input#item-name {
+  background-color: transparent;
+  outline: none;
+  border-color: transparent;
+  box-shadow:
+  var(--color-bg-shadow) inset 2px 2px 5px,
+  var(--color-bg-light) inset -5px -5px 10px;
+  padding-left: 8px;
+  border-radius: 5px;
+  color: var(--color-text-light);
+}
+
+input#item-calories::placeholder,
+input#item-name::placeholder {
+  color: var(--color-text-light);
+}
+
+
+.input-field.col label {
+  top: -7px;
+  color: var(--color-text-light);
+}
+
+/* 
+label.active {
+  color:var(--color-text) !important;
+} */
+
+ /* label focus color */
+ .input-field input[type=text]:focus + label.active, 
+ .input-field input[type=number]:focus + label.active {
+  color: var(--color-text-light);
+  font-weight: bold;
+  transform:  translateY(-15px);
+}
+
+i.edit-item {
+  color: var(--color-text-light);
+}
+ 
+.disable-select {
+  user-select: none; /* supported by Chrome and Opera */
+ -webkit-user-select: none; /* Safari */
+ -khtml-user-select: none; /* Konqueror HTML */
+ -moz-user-select: none; /* Firefox */
+ -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+@media(max-width:600px) {
+  nav .brand-logo.center {
+    left: 110px;
+    font-size: 25px;
+  }
+  .btn-b {
+    width: 90px;
+  }
+}
+
+@media (max-width:450px) {
+  h3.center-align {
+    font-size: 30px;
+  }
+  .btn-b {
+    width: 70px;
+  }
+}
